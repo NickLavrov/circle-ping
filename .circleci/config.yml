@@ -6,3 +6,6 @@ jobs:
     steps:
       - checkout
       - run: echo "ping"
+      - run: git clone https://github.com/NickLavrov/circle-pong.git
+      - run: cd circle-pong && echo "$((`cat count.txt` + 1))" > count.txt
+      - run: cd circle-pong && git status
