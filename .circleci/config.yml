@@ -11,4 +11,4 @@ jobs:
       - run: cd circle-ping && git config user.email "nlavrov999@gmail.com"
       - run: cd circle-ping && git config --global user.name "NickLavrov"
       - run: cd circle-ping && git commit -am 'Increase count.'
-      - run: git push -q https://${GITHUB_TOKEN}@github.com/NickLavrov/circle-ping.git HEAD
+      - run: cd circle-ping && git push -q https://${GITHUB_TOKEN}@github.com/NickLavrov/circle-ping.git HEAD
