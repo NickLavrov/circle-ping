@@ -7,8 +7,8 @@ jobs:
       - checkout
       - run: echo "ping"
       - run: git clone https://github.com/NickLavrov/circle-ping.git
-      - run: cd circle-pong && echo "$((`cat count.txt` + 1))" > count.txt
-      - run: cd circle-pong && git config user.email "nlavrov999@gmail.com"
-      - run: cd circle-pong && git config --global user.name "NickLavrov"
-      - run: cd circle-pong && git commit -am 'Increase count.'
+      - run: cd circle-ping && echo "$((`cat count.txt` + 1))" > count.txt
+      - run: cd circle-ping && git config user.email "nlavrov999@gmail.com"
+      - run: cd circle-ping && git config --global user.name "NickLavrov"
+      - run: cd circle-ping && git commit -am 'Increase count.'
       - run: git push -q https://${GITHUB_TOKEN}@github.com/NickLavrov/circle-ping.git HEAD
